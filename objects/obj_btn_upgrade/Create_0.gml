@@ -1,4 +1,5 @@
 escala = image_xscale;
+ang = image_angle;
 
 
 
@@ -19,17 +20,19 @@ interagindo = function()
         {
             //efeito do mouse em cima
             tween(id, "escala", 2.2, tween_animation.elastic);
+            tween(id, "ang", 5, tween_animation.elastic);
         }
         
         //mudando room
         if (_mouse_released)
         {
-            room_goto(rm_upgrades);
+            room_goto(destino);
         }
     }
     else
     {
         //retornando efeito
         tween(id, "escala", 2, tween_animation.elastic);
+        tween(id, "ang", 0, tween_animation.elastic);
     }
 }

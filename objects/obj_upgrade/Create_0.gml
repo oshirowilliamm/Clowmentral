@@ -1,11 +1,10 @@
-sprites = [spr_level1, spr_level2, spr_level3, spr_level4];
-incremento = 1;
+image_index = index;
 escala = image_xscale;
 ang = image_angle;
 
 
 
-indo_level = function()
+interagindo = function()
 {
     var _mouse_sobre = position_meeting(mouse_x, mouse_y, id);
     var _mouse_segurando = mouse_check_button(mb_left);
@@ -25,30 +24,16 @@ indo_level = function()
             tween(id, "ang", 10, tween_animation.elastic);
         }
         
-        //indo pro level
+        //comprando
         if (_mouse_released)
         {
-            room_goto(destino);
+               
         }
     }
     else
     {
+        //retornando efeito
         tween(id, "escala", 1, tween_animation.elastic);
-        tween(id, "ang", 0, tween_animation.elastic);
-    }
-}
-
-acao = function()
-{
-    //mudando sprite se desbloqueado
-    if (desbloqueado)
-    {
-        image_index = 1;
-        
-        indo_level();
-    }
-    else
-    {
-        image_index = 0;
+        tween(id, "ang", 0, tween_animation.bounce);
     }
 }
