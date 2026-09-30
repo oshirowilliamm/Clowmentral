@@ -1,16 +1,12 @@
 sprites = [spr_level1, spr_level2, spr_level3, spr_level4];
 incremento = 1;
+escala = image_xscale;
+
 
 
 define_sprite = function()
 {
     sprite_index = sprites[index];
-}
-
-efeito = function(_tam, _anim, _time = 60,)
-{
-    tween(id, "image_xscale", _tam, _anim, _time);
-    tween(id, "image_yscale", _tam, _anim, _time);
 }
 
 indo_level = function()
@@ -24,12 +20,12 @@ indo_level = function()
         if (_mouse_segurando)
         {
             //efeito do click
-            efeito(.8, tween_animation.flat);
+            tween(id, "escala", .8, tween_animation.flat);
         }
         else
         {
             //efeito do mouse em cima
-            efeito(1.2, tween_animation.elastic);
+            tween(id, "escala", 1.2, tween_animation.elastic);
         }
         
         //indo pro level
@@ -40,7 +36,7 @@ indo_level = function()
     }
     else
     {
-        efeito(1, tween_animation.elastic);
+        tween(id, "escala", 1, tween_animation.elastic);
     }
 }
 

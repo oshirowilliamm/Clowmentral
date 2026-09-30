@@ -1,12 +1,16 @@
-function texto(_x, _y, _txt, _halign = 0, _valign = 0, _font = fnt_game)
+function texto(_x, _y, _txt, _xscale = 1, _yscale = _xscale, _halign = 0, _valign = 0, _espaco = 3, _font = "fnt_hud")
 {
-    draw_set_font(_font);
-    draw_set_halign(_halign);
-    draw_set_valign(_valign);
+    scribble(_txt)
+        .starting_format(_font, c_white)
+        .align(_halign, _valign)
+        .scale(_xscale, _yscale)
+        .blend(c_black, 1)
+        .draw(_x + _espaco, _y + _espaco);
     
-    draw_text(_x, _y, _txt);
-    
-    draw_set_halign(-1);
-    draw_set_valign(-1);
-    draw_set_font(-1);
+    scribble(_txt)
+        .starting_format(_font, c_white)
+        .align(_halign, _valign)
+        .scale(_xscale, _yscale)
+        .blend(c_white, 1)
+        .draw(_x, _y);
 }
