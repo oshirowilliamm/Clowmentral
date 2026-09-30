@@ -4,6 +4,11 @@ ang = image_angle;
 
 
 
+comprando = function()
+{
+    
+}
+
 interagindo = function()
 {
     var _mouse_sobre = position_meeting(mouse_x, mouse_y, id);
@@ -27,13 +32,21 @@ interagindo = function()
         //comprando
         if (_mouse_released)
         {
-               
+            comprando();
         }
     }
     else
     {
         //retornando efeito
         tween(id, "escala", 1, tween_animation.elastic);
-        tween(id, "ang", 0, tween_animation.bounce);
+        tween(id, "ang", 0, tween_animation.bounce, 30);
     }
+}
+
+desenha_infos = function()
+{
+    //mostrando o level
+    var _level = global.upgrades[$ upgrade].level;
+    
+    texto_scribble(x + 20, y - 22, _level, .3,, 1, 1, 2);
 }
