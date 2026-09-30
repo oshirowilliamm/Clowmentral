@@ -1,0 +1,2 @@
+define_sprite();
+acao();
