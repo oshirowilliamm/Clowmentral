@@ -9,12 +9,12 @@ global.upgrades =
         nome: "Cuidado com a tendinite!",
         descricao: "Aumenta o dano do clique.",
         custo: 10,
-        level: 10
+        level: 1
     },
     cachorro:
     {
         nome: "Seu companheiro!",
-        descricao: "Ataque o inimigo mais próximo.",
+        descricao: "Ataque o inimigo mais proximo.",
         custo: 20,
         level: 1
     },
@@ -27,7 +27,7 @@ global.upgrades =
     },
     vida:
     {
-        nome: "Ter saúde é importante!",
+        nome: "Saude importa!",
         descricao: "Aumenta sua vida.",
         custo: 25,
         level: 1
@@ -35,7 +35,7 @@ global.upgrades =
     dinheiro:
     {
         nome: "GRANAAA!",
-        descricao: "Duplique a quantidade de dinheiro que você ganha.",
+        descricao: "Duplique a quantidade de dinheiro que voce ganha.",
         custo: 100,
         level: 1
     },

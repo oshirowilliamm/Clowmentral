@@ -1,12 +1,21 @@
 image_index = index;
 escala = image_xscale;
 ang = image_angle;
+info = noone;
 
 
 
 comprando = function()
 {
-    
+    var _upgrade = global.upgrades[$ upgrade];
+       
+    if (global.moeda >= _upgrade.custo)
+    {
+        global.moeda -= _upgrade.custo;
+        
+        _upgrade.level++;
+        _upgrade.custo += round(_upgrade.custo * .2);
+    }
 }
 
 interagindo = function()
@@ -45,8 +54,18 @@ interagindo = function()
 
 desenha_infos = function()
 {
-    //mostrando o level
-    var _level = global.upgrades[$ upgrade].level;
-    
-    texto_scribble(x + 20, y - 22, _level, .3,, 1, 1, 2);
+    if (position_meeting(mouse_x, mouse_y, id))
+    {
+        if (!instance_exists(info))
+        {
+            info = instance_create_depth(x, y - 25, depth - 1, obj_upgrade_info, {upgrade: upgrade});
+        }
+    }
+    else
+    {
+        if (instance_exists(info))
+        {
+            instance_destroy(info);
+        }
+    }
 }

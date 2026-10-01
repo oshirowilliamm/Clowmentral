@@ -1,6 +1,7 @@
 //desenhando a moeda
-var _x = 40;
+var _x = 20;
 var _y = 40;
 
-draw_sprite_ext(spr_moedas, 0, _x, _y, 3, 3, 0, c_white, 1);
-texto_scribble(_x + 40, _y, global.moeda,,,, 1);
+dinheiro_desenhado = lerp(dinheiro_desenhado, global.moeda, .2);
+var _txt = string("[scale, 4][{0},0][/] {1}", spr_moedas, round(dinheiro_desenhado));
+texto_scribble(_x, _y, _txt, .8,,, 1);
