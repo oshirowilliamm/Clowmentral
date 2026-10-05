@@ -5,7 +5,7 @@ dano_recebido = 0;
 
 click = function()
 {
-    var _mouse_click = mouse_check_button_pressed(mb_left);
+    var _mouse_click = mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_space);
     var _sobre_inimigo = position_meeting(mouse_x, mouse_y, obj_inimigo);
     
     if (_sobre_inimigo)
@@ -50,12 +50,9 @@ retorna_efeito = function()
 
 prox_fase = function()
 {
-    //se acabar os inimigos, ir pra prox fase
-    if (!instance_exists(obj_inimigo))
+    //se acabar os inimigos e as moedas, ir pra prox fase
+    if (!instance_exists(obj_inimigo) && !instance_exists(obj_moeda))
     {
-        if (alarm[0] == -1)
-        {
-            alarm[0] = 100;
-        }
+        room_goto(destino);
     }
 }

@@ -1,10 +1,11 @@
 //movimento
-tempo_andar = random_range(.5, 1) * FPS;
+tempo_andar = random_range(.7, 1.2) * FPS;
 timer_andar = tempo_andar;
 deslocamento = 30;
 
 //infos
-vida = 10;
+vida_max = 10;
+vida = vida_max;
 dano = 1;
 qnt_moeda = 1;
 
@@ -75,4 +76,20 @@ morrendo = function()
             instance_create_depth(x, y, depth - 1, obj_moeda);
         }
     }
+}
+
+desenha_vida = function()
+{
+    //pegando o tamanho da sprite de acordo com a vida
+    var _porc = clamp(vida / vida_max, 0, 1);
+    var _w = sprite_get_width(spr_barra_vida);
+    var _h = sprite_get_height(spr_barra_vida);
+    
+    //posição
+    var _x = x - _w / 2;
+    var _y = y - 40;
+    
+    //desenhando a barra
+    draw_sprite(spr_barra_vida, 0, _x, _y);
+    draw_sprite_stretched_ext(spr_barra_vida, 1, _x, _y, _w * _porc, _h, c_red, 1);
 }
