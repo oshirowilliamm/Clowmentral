@@ -1,5 +1,11 @@
-//dinheiro
+randomise();
+
+#macro FPS game_get_speed(gamespeed_fps)
+
+//variaveis de upgrades
 global.moeda = 0;
+global.vida = 10;
+global.dano = 1;
 
 //upgrades
 global.upgrades =
