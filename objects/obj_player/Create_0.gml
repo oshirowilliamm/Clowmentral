@@ -15,6 +15,7 @@ click = function()
         if (_mouse_click)
         {
             _inimigo.recebe_dano();
+            toca_som(snd_click, .5);
         }
     }
 }
@@ -29,6 +30,15 @@ recebe_dano = function(_dano)
     image_yscale = 1.5;
     var _efeito = instance_create_depth(x, y, depth - 1, obj_efeito);
     _efeito.sprite_index = spr_efx_dano;
+}
+
+morrendo = function()
+{
+    if (global.vida <= 0)
+    {
+        room_goto(rm_menu);
+        global.vida = global.vida_max;
+    }
 }
 
 retorna_efeito = function()

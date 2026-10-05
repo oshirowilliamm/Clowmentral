@@ -18,6 +18,7 @@ colidindo_mouse = function()
         instance_destroy(id);
         
         global.moeda += valor;
+        toca_som(snd_moeda, .2);
     }
 }
 

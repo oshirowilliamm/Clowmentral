@@ -1,12 +1,14 @@
-tempo_andar = random_range(2, 3) * FPS;
+//movimento
+tempo_andar = random_range(.5, 1) * FPS;
 timer_andar = tempo_andar;
+deslocamento = 30;
 
-deslocamento = 20;
-y_destino = y;
-
+//infos
 vida = 10;
 dano = 1;
-qnt_moeda = 5;
+qnt_moeda = 1;
+
+y_destino = y;
 
 
 
@@ -33,6 +35,8 @@ colisao_player = function()
         
         //dando dano no player
         obj_player.recebe_dano(dano);
+        audio_stop_sound(snd_dano_player);
+        toca_som(snd_dano_player);
     }
 }
 

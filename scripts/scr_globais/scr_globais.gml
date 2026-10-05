@@ -4,7 +4,8 @@ randomise();
 
 //variaveis de upgrades
 global.moeda = 0;
-global.vida = 10;
+global.vida_max = 10;
+global.vida = global.vida_max;
 global.dano = 1;
 
 //upgrades

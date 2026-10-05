@@ -15,6 +15,8 @@ desenha_moeda = function()
 
 desenha_vida = function()
 {
+    if (room == rm_menu || room == rm_upgrades) return;
+    
     var _x = display_get_gui_width() - 80;
     var _y = display_get_gui_height() - 80;
     

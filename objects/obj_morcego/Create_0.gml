@@ -1,6 +1,12 @@
 // Inherit the parent event
 event_inherited();
 
-tempo_andar = random_range(3, 4) * FPS;
+//movimento
+tempo_andar = random_range(1, 2) * FPS;
 timer_andar = tempo_andar;
-deslocamento = 50;
+deslocamento = 60;
+
+//infos
+vida = 15;
+dano = 2;
+qnt_moeda = 5;

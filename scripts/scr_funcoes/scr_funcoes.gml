@@ -33,3 +33,9 @@ function texto_scribble_ext(_x, _y, _txt, _xscale = 1, _yscale = _xscale, _halig
         .wrap(_wrap)
         .draw(_x, _y);
 }
+
+function toca_som (_snd, _pitch = 0)
+{
+    var _p = random_range(1 - _pitch, 1 + _pitch);
+    audio_play_sound(_snd, 0, 0,,, _p);
+}
