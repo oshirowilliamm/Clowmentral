@@ -15,6 +15,7 @@ comprando = function()
         
         _upgrade.level++;
         _upgrade.custo += round(_upgrade.custo * .2);
+        _upgrade.efeito();
     }
 }
 
