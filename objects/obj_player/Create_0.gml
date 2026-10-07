@@ -19,7 +19,7 @@ click = function()
         
         if (_mouse_click)
         {
-            _inimigo.recebe_dano(global.dano);
+            _inimigo.recebe_dano(global.dano, spr_efx_dano);
             toca_som(snd_click, .5);
         }
     }

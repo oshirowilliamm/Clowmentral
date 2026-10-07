@@ -15,7 +15,7 @@ ataca = function()
         
         if (_prox)
         {
-            _prox.recebe_dano(global.cachorro);
+            _prox.recebe_dano(global.cachorro, spr_efx_mordida);
             toca_som(snd_latido);
         }
         

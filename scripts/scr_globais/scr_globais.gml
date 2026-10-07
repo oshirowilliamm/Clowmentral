@@ -7,11 +7,11 @@ global.moeda         = 0;
 global.multiplicador = 1;
 
 //vida
-global.vida_max = 100;
+global.vida_max = 10;
 global.vida     = global.vida_max;
 
 //dano
-global.dano = 10;
+global.dano = 1;
 
 //ajudantes
 global.cachorro = 0;
@@ -42,7 +42,7 @@ global.upgrades =
         level: 1,
         efeito: function()
         {
-            global.cachorro++;
+            global.cachorro += 5;
         }
     },
     gato:
@@ -53,7 +53,7 @@ global.upgrades =
         level: 1,
         efeito: function()
         {
-            global.gato++;
+            global.gato += 2;
         }
     },
     vida:

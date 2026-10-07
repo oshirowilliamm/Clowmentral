@@ -17,7 +17,7 @@ ataca = function()
             {
                 var _inimigo = instance_find(obj_inimigo, i);
                 
-                _inimigo.recebe_dano(global.gato);
+                _inimigo.recebe_dano(global.gato, spr_efx_arranhao);
             }
             
             toca_som(snd_rosnar);

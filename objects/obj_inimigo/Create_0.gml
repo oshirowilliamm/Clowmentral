@@ -43,7 +43,7 @@ colisao_player = function()
     }
 }
 
-recebe_dano = function(_dano)
+recebe_dano = function(_dano, _efx)
 {
     vida -= _dano;
     
@@ -51,8 +51,14 @@ recebe_dano = function(_dano)
     image_blend = c_red;
     image_xscale = 1.5;
     image_yscale = 1.5;
+    
+    //efeito de dano
     var _efeito = instance_create_depth(x, y, depth - 1, obj_efeito);
-    _efeito.sprite_index = spr_efx_dano;
+    _efeito.sprite_index = _efx;
+    
+    //efeito de numero
+    var _num = instance_create_depth(x + 10, y - 10, depth - 1, obj_efx_num);
+    _num.dano = _dano;
 }
 
 retorna_efeito = function()
