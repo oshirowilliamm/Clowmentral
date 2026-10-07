@@ -10,7 +10,7 @@ deslocamento = 5;
 //infos
 vida_max = 1200;
 vida = vida_max;
-dano = 15;
+dano = 10;
 qnt_moeda = 5;
 tipo_moeda = 3;
 prox_mundo = 3;

@@ -64,7 +64,7 @@ global.upgrades =
         level: 1,
         efeito: function()
         {
-            global.vida_max += 10;
+            global.vida_max *= 2;
             global.vida = global.vida_max;
         }
     },

@@ -47,5 +47,5 @@ desenha_vida = function()
     
     //desenhando a barra
     draw_sprite_ext(spr_barra_vida, 0, _x, _y, _xscale, _yscale, 0, c_white, 1);
-    draw_sprite_stretched_ext(spr_barra_vida, 1, _x, _y, _w * _porc, _h, c_red, 1);
+    draw_sprite_stretched_ext(spr_barra_vida, 1, _x, _y, _w * _porc, _h, #C32454, 1);
 }
