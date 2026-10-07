@@ -1,5 +1,5 @@
-tempo_min = 1;
-tempo_max = 2;
+tempo_min = 2;
+tempo_max = 4;
 timer_atk = random_range(tempo_min, tempo_max) * FPS;
 
 
@@ -16,6 +16,7 @@ ataca = function()
         if (_prox)
         {
             _prox.recebe_dano();
+            toca_som(snd_latido);
         }
         
         //resetando timer

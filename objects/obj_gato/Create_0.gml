@@ -1,5 +1,5 @@
-tempo_min = 2;
-tempo_max = 4;
+tempo_min = 3;
+tempo_max = 5;
 timer_atk = random_range(tempo_min, tempo_max) * FPS;
 
 
@@ -11,11 +11,16 @@ ataca = function()
     if (timer_atk <= 0)
     {
         //atacando todos os inimigos
-        for (var i = 0; i < instance_number(obj_inimigo); i++)
+        if (instance_exists(obj_inimigo))
         {
-            var _inimigo = instance_find(obj_inimigo, i);
+            for (var i = 0; i < instance_number(obj_inimigo); i++)
+            {
+                var _inimigo = instance_find(obj_inimigo, i);
+                
+                _inimigo.recebe_dano();
+            }
             
-            _inimigo.recebe_dano();
+            toca_som(snd_rosnar);
         }
         
         //resetando timer

@@ -68,7 +68,7 @@ cria_cachorro = function()
     {
         if (!instance_exists(cachorro))
         {
-            cachorro = instance_create_depth(x - 50, y, depth, obj_cachorro);
+            cachorro = instance_create_depth(x - 50, y - 20, depth, obj_cachorro);
         }
     }
 }
@@ -79,7 +79,7 @@ cria_gato = function()
     {
         if (!instance_exists(gato))
         {
-            gato = instance_create_depth(x - 50, y, depth, obj_gato);
+            gato = instance_create_depth(x + 50, y - 20, depth, obj_gato);
         }
     }
 }

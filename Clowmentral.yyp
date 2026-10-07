@@ -75,7 +75,7 @@
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},
     {"id":{"name":"obj_aranha","path":"objects/obj_aranha/obj_aranha.yy",},},
     {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},},
-    {"id":{"name":"obj_btn_upgrade","path":"objects/obj_btn_upgrade/obj_btn_upgrade.yy",},},
+    {"id":{"name":"obj_botao","path":"objects/obj_botao/obj_botao.yy",},},
     {"id":{"name":"obj_cachorro","path":"objects/obj_cachorro/obj_cachorro.yy",},},
     {"id":{"name":"obj_caixa","path":"objects/obj_caixa/obj_caixa.yy",},},
     {"id":{"name":"obj_corvo","path":"objects/obj_corvo/obj_corvo.yy",},},

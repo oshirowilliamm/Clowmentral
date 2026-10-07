@@ -14,7 +14,7 @@ global.vida     = global.vida_max;
 global.dano = 1;
 
 //ajudantes
-global.cachorro = 0;
+global.cachorro = 1;
 global.gato     = 1;
 
 //upgrades
