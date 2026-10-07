@@ -1,12 +1,15 @@
 direction = random(359);
 speed = 4;
-seguir = false;
-spd_seguir = 0;
+alarm[0] = 10;
+alarm[1] = 60;
+
+//dinheiro
 valor = 1;
 tipo_moeda = 1;
 
-alarm[0] = 10;
-alarm[1] = 60;
+//variaveis para seguir o mouse
+seguir = false;
+spd_seguir = 0;
 
 
 

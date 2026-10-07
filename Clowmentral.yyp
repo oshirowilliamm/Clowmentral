@@ -278,6 +278,7 @@
     {"id":{"name":"spr_btn_room_upgrade","path":"sprites/spr_btn_room_upgrade/spr_btn_room_upgrade.yy",},},
     {"id":{"name":"spr_btn_upgrade","path":"sprites/spr_btn_upgrade/spr_btn_upgrade.yy",},},
     {"id":{"name":"spr_cachorro","path":"sprites/spr_cachorro/spr_cachorro.yy",},},
+    {"id":{"name":"spr_caixa_moeda","path":"sprites/spr_caixa_moeda/spr_caixa_moeda.yy",},},
     {"id":{"name":"spr_caixa","path":"sprites/spr_caixa/spr_caixa.yy",},},
     {"id":{"name":"spr_caveira","path":"sprites/spr_caveira/spr_caveira.yy",},},
     {"id":{"name":"spr_corvo","path":"sprites/spr_corvo/spr_corvo.yy",},},
