@@ -1,7 +1,7 @@
-var _tempo = 100;
-tween(id, "image_alpha", 0, tween_animation.back, _tempo);
-tween(id, "image_xscale", 0, tween_animation.back, _tempo);
-tween(id, "image_yscale", 0, tween_animation.back, _tempo);
+var _tempo = .05;
+image_alpha = lerp(image_alpha, 0, _tempo);
+image_xscale = lerp(image_xscale, 0, _tempo);
+image_yscale = lerp(image_yscale, 0, _tempo);
 
 
 
