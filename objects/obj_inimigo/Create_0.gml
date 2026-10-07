@@ -9,6 +9,7 @@ vida_max = 10;
 vida = vida_max;
 dano = 1;
 qnt_moeda = 1;
+tipo_moeda = 0;
 
 y_destino = y;
 
@@ -42,9 +43,9 @@ colisao_player = function()
     }
 }
 
-recebe_dano = function()
+recebe_dano = function(_dano)
 {
-    vida -= global.dano;
+    vida -= _dano;
     
     //efeitos
     image_blend = c_red;
@@ -74,7 +75,8 @@ morrendo = function()
         //criando as moedas
         repeat (qnt_moeda)
         {
-            instance_create_depth(x, y, depth - 1, obj_moeda);
+            var _moeda = instance_create_depth(x, y, depth - 1, obj_moeda);
+            _moeda.image_index = tipo_moeda;
         }
     }
 }

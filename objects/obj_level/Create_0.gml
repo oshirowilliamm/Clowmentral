@@ -1,4 +1,5 @@
 sprites = [spr_level1, spr_level2, spr_level3, spr_level4];
+desbloqueado = global.leveis[index];
 incremento = 1;
 escala = image_xscale;
 ang = image_angle;

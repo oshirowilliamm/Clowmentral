@@ -11,11 +11,14 @@ global.vida_max = 10;
 global.vida     = global.vida_max;
 
 //dano
-global.dano = 1;
+global.dano = 100;
 
 //ajudantes
-global.cachorro = 1;
-global.gato     = 1;
+global.cachorro = 0;
+global.gato     = 0;
+
+//desbloqueio de leveis
+global.leveis = [true, false, false, false];
 
 //upgrades
 global.upgrades =

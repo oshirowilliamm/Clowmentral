@@ -1,4 +1,5 @@
 sprite_index = sprites[index];
+desbloqueado = global.leveis[index];
 
 acao();
 

@@ -28,7 +28,6 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"index","filters":[],"listItems":[],"multiselect":false,"name":"index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-    {"$GMObjectProperty":"v2","%Name":"desbloqueado","filters":[],"listItems":[],"multiselect":false,"name":"desbloqueado","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"destino","filters":[
         "GMRoom",
       ],"listItems":[],"multiselect":false,"name":"destino","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_mundo1_level1","path":"rooms/rm_mundo1_level1/rm_mundo1_level1.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_mundo1_level1","varType":5,},

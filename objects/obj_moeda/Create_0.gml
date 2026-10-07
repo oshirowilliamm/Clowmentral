@@ -3,11 +3,25 @@ speed = 4;
 seguir = false;
 spd_seguir = 0;
 valor = 1;
+tipo_moeda = 1;
 
 alarm[0] = 10;
 alarm[1] = 60;
 
 
+
+definindo_valor = function()
+{
+    switch (image_index) 
+    {
+    	case 0: valor = 1; break;
+        case 1: valor = 10; break;
+        case 2: valor = 100; break;
+        case 3: valor = 500; break;
+        case 4: valor = 1000; break;
+        case 5: valor = 5000; break;
+    }
+}
 
 colidindo_mouse = function()
 {
