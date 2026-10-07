@@ -8,8 +8,8 @@ timer_andar = random_range(tempo_min, tempo_max) * FPS;
 deslocamento = 30;
 
 //infos
-vida_max = 50;
+vida_max = 30;
 vida = vida_max;
 dano = 8;
-qnt_moeda = 5;
+qnt_moeda = 1;
 tipo_moeda = 1;

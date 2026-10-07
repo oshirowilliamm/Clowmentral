@@ -7,7 +7,7 @@ global.moeda         = 0;
 global.multiplicador = 1;
 
 //vida
-global.vida_max = 10;
+global.vida_max = 100;
 global.vida     = global.vida_max;
 
 //dano
