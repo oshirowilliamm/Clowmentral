@@ -31,7 +31,7 @@ global.upgrades =
         level: 1,
         efeito: function()
         {
-            global.dano *= 2;
+            global.dano++;
         }
     },
     cachorro:
@@ -49,7 +49,7 @@ global.upgrades =
     {
         nome: "Gatinho ligeiro",
         descricao: "Ataca todo mundo!",
-        custo: 20,
+        custo: 25,
         level: 1,
         efeito: function()
         {
@@ -60,19 +60,19 @@ global.upgrades =
     {
         nome: "Saude importa!",
         descricao: "Aumenta sua vida.",
-        custo: 25,
+        custo: 15,
         level: 1,
         efeito: function()
         {
-            global.vida_max *= 2;
+            global.vida_max += 10;
             global.vida = global.vida_max;
         }
     },
     dinheiro:
     {
         nome: "GRANAAA!",
-        descricao: "Duplique a quantidade de dinheiro que voce ganha.",
-        custo: 100,
+        descricao: "Aumenta o valor das moedas.",
+        custo: 80,
         level: 1,
         efeito: function()
         {

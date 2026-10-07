@@ -16,6 +16,8 @@ comprando = function()
         _upgrade.level++;
         _upgrade.custo *= 2;
         _upgrade.efeito();
+        
+        toca_som(snd_compra);
     }
 }
 

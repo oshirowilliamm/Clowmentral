@@ -8,5 +8,3 @@ if (vspeed > 0)
     
     if (alpha <= 0) instance_destroy();
 }
-
-show_debug_message(vspeed)

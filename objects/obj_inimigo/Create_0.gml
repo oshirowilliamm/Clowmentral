@@ -5,7 +5,7 @@ timer_andar = random_range(tempo_min, tempo_max) * FPS;
 deslocamento = 30;
 
 //infos
-vida_max = 10;
+vida_max = 15;
 vida = vida_max;
 dano = 1;
 qnt_moeda = 1;

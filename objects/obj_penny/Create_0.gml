@@ -17,7 +17,7 @@ prox_mundo = 0;
 
 
 
-recebe_dano = function(_dano)
+recebe_dano = function(_dano, _efx)
 {
     vida -= _dano;
     
@@ -26,7 +26,7 @@ recebe_dano = function(_dano)
     image_xscale = 1.2;
     image_yscale = 1.2;
     var _efeito = instance_create_depth(x, y, depth - 1, obj_efeito);
-    _efeito.sprite_index = spr_efx_dano;
+    _efeito.sprite_index = _efx;
     _efeito.image_xscale = 1.5;
     _efeito.image_yscale = 1.5;
 }

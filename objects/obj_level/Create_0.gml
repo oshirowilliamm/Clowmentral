@@ -30,6 +30,7 @@ indo_level = function()
         if (_mouse_released)
         {
             room_goto(destino);
+            global.vida = global.vida_max;
         }
     }
     else

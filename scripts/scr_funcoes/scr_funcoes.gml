@@ -39,3 +39,85 @@ function toca_som (_snd, _pitch = 0)
     var _p = random_range(1 - _pitch, 1 + _pitch);
     audio_play_sound(_snd, 0, 0,,, _p);
 }
+
+function formata_moeda (_valor)
+{
+    //quadrilhao
+    if (_valor >= 1000000000000000)
+    {
+        var _num = _valor / 1000000000000000;
+        var _str = string_format(_num, 0, 1);
+        _str = string_replace(_str, ".0", "");
+        
+        //tirando o numero depois do . apos a dezena
+        if (_num > 10)
+        {
+            _str = string_format(_num, 0, 0);
+        }
+        
+        return _str + "QD";
+    }
+    //trilhao
+    else if (_valor >= 1000000000000)
+    {
+        var _num = _valor / 1000000000000;
+        var _str = string_format(_num, 0, 1);
+        _str = string_replace(_str, ".0", "");
+        
+        //tirando o numero depois do . apos a dezena
+        if (_num > 10)
+        {
+            _str = string_format(_num, 0, 0);
+        }
+        
+        return _str + "T";
+    }
+    //bilhao
+    else if (_valor >= 1000000000)
+    {
+        var _num = _valor / 1000000000;
+        var _str = string_format(_num, 0, 1);
+        _str = string_replace(_str, ".0", "");
+        
+        //tirando o numero depois do . apos a dezena
+        if (_num > 10)
+        {
+            _str = string_format(_num, 0, 0);
+        }
+        
+        return _str + "B";
+    }
+    //milhao
+    else if (_valor >= 1000000)
+    {
+        var _num = _valor / 1000000;
+        var _str = string_format(_num, 0, 1);
+        _str = string_replace(_str, ".0", "");
+        
+        //tirando o numero depois do . apos a dezena
+        if (_num > 10)
+        {
+            _str = string_format(_num, 0, 0);
+        }
+        
+        return _str + "M";
+    }
+    //mil
+    else if (_valor >= 1000)
+    {
+        var _num = _valor / 1000;
+        var _str = string_format(_num, 0, 1);
+        _str = string_replace(_str, ".0", "");
+        
+        //tirando o numero depois do . apos a dezena
+        if (_num > 10)
+        {
+            _str = string_format(_num, 0, 0);
+        }
+        
+        return _str + "K";
+    }
+    
+    //menor que mil
+    return string(round(_valor));
+}

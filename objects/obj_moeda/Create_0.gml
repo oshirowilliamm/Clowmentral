@@ -19,10 +19,10 @@ definindo_valor = function()
     {
     	case 0: valor = 1; break;
         case 1: valor = 10; break;
-        case 2: valor = 100; break;
-        case 3: valor = 500; break;
-        case 4: valor = 1000; break;
-        case 5: valor = 5000; break;
+        case 2: valor = 50; break;
+        case 3: valor = 100; break;
+        case 4: valor = 500; break;
+        case 5: valor = 1000000; break;
     }
 }
 
