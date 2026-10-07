@@ -1,6 +1,11 @@
 vida_desenhada = global.vida;
 dano_recebido = 0;
 
+//ajudantes
+cachorro = noone;
+gato     = noone;
+
+
 
 
 click = function()
@@ -54,5 +59,27 @@ prox_fase = function()
     if (!instance_exists(obj_inimigo) && !instance_exists(obj_moeda))
     {
         room_goto(destino);
+    }
+}
+
+cria_cachorro = function()
+{
+    if (global.cachorro > 0)
+    {
+        if (!instance_exists(cachorro))
+        {
+            cachorro = instance_create_depth(x - 50, y, depth, obj_cachorro);
+        }
+    }
+}
+
+cria_gato = function()
+{
+    if (global.gato > 0)
+    {
+        if (!instance_exists(gato))
+        {
+            gato = instance_create_depth(x - 50, y, depth, obj_gato);
+        }
     }
 }

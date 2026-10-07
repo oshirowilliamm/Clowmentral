@@ -2,6 +2,8 @@ click();
 morrendo();
 retorna_efeito();
 prox_fase();
+cria_cachorro();
+cria_gato();
 
 
 

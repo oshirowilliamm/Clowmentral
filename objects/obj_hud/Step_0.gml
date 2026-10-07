@@ -1,7 +1,6 @@
 if (keyboard_check(vk_up))
 {
     global.moeda++; 
-    global.vida += 10;
 }
 
 if (keyboard_check_pressed(ord("R")))

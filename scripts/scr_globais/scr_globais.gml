@@ -2,11 +2,20 @@ randomise();
 
 #macro FPS game_get_speed(gamespeed_fps)
 
-//variaveis de upgrades
-global.moeda = 0;
+//dinheiro
+global.moeda         = 0;
+global.multiplicador = 1;
+
+//vida
 global.vida_max = 10;
-global.vida = global.vida_max;
+global.vida     = global.vida_max;
+
+//dano
 global.dano = 1;
+
+//ajudantes
+global.cachorro = 0;
+global.gato     = 1;
 
 //upgrades
 global.upgrades =
@@ -30,7 +39,7 @@ global.upgrades =
         level: 1,
         efeito: function()
         {
-            global.dano *= 2;
+            global.cachorro++;
         }
     },
     gato:
@@ -41,7 +50,7 @@ global.upgrades =
         level: 1,
         efeito: function()
         {
-            global.dano *= 2;
+            global.gato++;
         }
     },
     vida:
@@ -52,7 +61,8 @@ global.upgrades =
         level: 1,
         efeito: function()
         {
-            global.dano *= 2;
+            global.vida_max *= 2;
+            global.vida = global.vida_max;
         }
     },
     dinheiro:
@@ -63,7 +73,7 @@ global.upgrades =
         level: 1,
         efeito: function()
         {
-            global.dano *= 2;
+            global.multiplicador++;
         }
     },
 }

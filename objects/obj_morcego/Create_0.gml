@@ -2,8 +2,8 @@
 event_inherited();
 
 //movimento
-tempo_andar = random_range(1, 2) * FPS;
-timer_andar = tempo_andar;
+tempo_min = 1;
+tempo_max = 2;
 deslocamento = 60;
 
 //infos

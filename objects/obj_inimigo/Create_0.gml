@@ -1,6 +1,7 @@
 //movimento
-tempo_andar = random_range(.7, 1.2) * FPS;
-timer_andar = tempo_andar;
+tempo_min = .7;
+tempo_max = 1.2;
+timer_andar = random_range(tempo_min, tempo_max) * FPS;
 deslocamento = 30;
 
 //infos
@@ -21,7 +22,7 @@ andando = function()
     {
         y_destino += deslocamento;
         
-        timer_andar = tempo_andar;
+        timer_andar = random_range(tempo_min, tempo_max) * FPS;
     }
     
     y = lerp(y, y_destino, .1);

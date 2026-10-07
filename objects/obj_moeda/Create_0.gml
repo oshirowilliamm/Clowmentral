@@ -17,7 +17,7 @@ colidindo_mouse = function()
     {
         instance_destroy(id);
         
-        global.moeda += valor;
+        global.moeda += valor * global.multiplicador;
         toca_som(snd_moeda, .2);
     }
 }
