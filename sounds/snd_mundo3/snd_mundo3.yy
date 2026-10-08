@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_compra",
+  "%Name":"snd_mundo3",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.58630383,
+  "duration":237.89714,
   "exportDir":"",
-  "name":"snd_compra",
+  "name":"snd_mundo3",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Musicas",
+    "path":"folders/Sounds/Musicas.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_compra.mp3",
-  "volume":1.0,
+  "soundFile":"snd_mundo3.mp3",
+  "volume":0.1,
 }

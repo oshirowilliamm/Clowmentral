@@ -10,7 +10,7 @@ pegando_valor = function(_upgrade)
     	case "click":       return global.dano;
         case "cachorro":    return global.cachorro;
         case "gato":        return global.gato;
-        case "vida":        return global.vida_max;
+        case "vida":        return formata_moeda(global.vida_max);
         case "dinheiro":    return global.multiplicador;
     }
 }
@@ -22,7 +22,7 @@ pegando_prox_valor = function(_upgrade)
     	case "click":       return global.dano + 1;
         case "cachorro":    return global.cachorro + 5;
         case "gato":        return global.gato + 2;
-        case "vida":        return global.vida_max * 2;
+        case "vida":        return formata_moeda(global.vida_max + 15);
         case "dinheiro":    return global.multiplicador + 1;
     }
 }

@@ -1,5 +1,5 @@
-tempo_min = 3;
-tempo_max = 5;
+tempo_min = 2;
+tempo_max = 3.5;
 timer_atk = random_range(tempo_min, tempo_max) * FPS;
 
 
@@ -17,7 +17,8 @@ ataca = function()
             {
                 var _inimigo = instance_find(obj_inimigo, i);
                 
-                _inimigo.recebe_dano(global.gato, spr_efx_arranhao);
+                var _dano = round(global.cachorro + (global.dano * .5));
+                _inimigo.recebe_dano(_dano, spr_efx_arranhao);
             }
             
             toca_som(snd_rosnar);

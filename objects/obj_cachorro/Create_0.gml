@@ -1,5 +1,5 @@
-tempo_min = 2;
-tempo_max = 4;
+tempo_min = 1.5;
+tempo_max = 2.5;
 timer_atk = random_range(tempo_min, tempo_max) * FPS;
 
 
@@ -15,7 +15,9 @@ ataca = function()
         
         if (_prox)
         {
-            _prox.recebe_dano(global.cachorro, spr_efx_mordida);
+            var _dano = round(global.cachorro + (global.dano * .5));
+            
+            _prox.recebe_dano(_dano, spr_efx_mordida);
             toca_som(snd_latido);
         }
         

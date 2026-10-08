@@ -1,6 +1,10 @@
 vida_desenhada = global.vida;
 dano_recebido = 0;
 
+//variaveis pro click segurado
+tempo_click = 8;
+timer_click = tempo_click;
+
 //ajudantes
 cachorro = noone;
 gato     = noone;
@@ -8,16 +12,54 @@ gato     = noone;
 
 
 
+click_segurado = function()
+{
+    var _mouse = mouse_check_button(mb_left) || keyboard_check(vk_space);
+    
+    if (_mouse)
+    {
+        timer_click--;
+        
+        if (timer_click <= 0)
+        {
+            timer_click = tempo_click;
+            return true;
+        }
+    }
+    else
+    {
+        timer_click = tempo_click;
+    }
+    
+    return false;
+}
+
 click = function()
 {
-    var _mouse_click = mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_space);
-    var _sobre_inimigo = position_meeting(mouse_x, mouse_y, obj_inimigo);
+    var _click = mouse_check_button_pressed(mb_left);
+    var _space = keyboard_check_pressed(vk_space);
+    var _inimigo = instance_position(mouse_x, mouse_y, obj_inimigo);
     
-    if (_sobre_inimigo)
+    if (_inimigo)
     {
-        var _inimigo = instance_place(mouse_x, mouse_y, obj_inimigo);
+        //click normal
+        if (_click)
+        {
+            timer_click = tempo_click;
+            _inimigo.recebe_dano(global.dano, spr_efx_dano);
+            toca_som(snd_click, .5);
+        }
         
-        if (_mouse_click)
+        //click espaço
+        if (_space)
+        {
+            timer_click = tempo_click;
+            _inimigo.recebe_dano(global.dano, spr_efx_dano);
+            toca_som(snd_click, .5);
+        }
+        
+        //click segurado
+        if (click_segurado())
         {
             _inimigo.recebe_dano(global.dano, spr_efx_dano);
             toca_som(snd_click, .5);

@@ -27,7 +27,7 @@ global.upgrades =
     {
         nome: "Cuidado com a tendinite!",
         descricao: "Aumenta o dano do clique.",
-        custo: 10,
+        custo: 15,
         level: 1,
         efeito: function()
         {
@@ -60,11 +60,11 @@ global.upgrades =
     {
         nome: "Saude importa!",
         descricao: "Aumenta sua vida.",
-        custo: 15,
+        custo: 10,
         level: 1,
         efeito: function()
         {
-            global.vida_max *= 2;
+            global.vida_max += 15;
             global.vida = global.vida_max;
         }
     },

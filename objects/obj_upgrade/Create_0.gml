@@ -2,20 +2,38 @@ image_index = index;
 escala = image_xscale;
 ang = image_angle;
 info = noone;
+cor = c_white;
+dados = global.upgrades[$ upgrade];
 
 
+
+aplicando_visual = function()
+{
+    //mundando a cor de acordo com poder de compra
+    if (global.moeda >= dados.custo)
+    {
+        cor = c_white;
+    }
+    else
+    {
+        cor = c_gray;
+    }
+    
+    image_xscale = escala;
+    image_yscale = escala;
+    image_angle = ang;
+    image_blend = cor;
+}
 
 comprando = function()
 {
-    var _upgrade = global.upgrades[$ upgrade];
-       
-    if (global.moeda >= _upgrade.custo)
+    if (global.moeda >= dados.custo)
     {
-        global.moeda -= _upgrade.custo;
+        global.moeda -= dados.custo;
         
-        _upgrade.level++;
-        _upgrade.custo *= 2;
-        _upgrade.efeito();
+        dados.level++;
+        dados.custo *= 2;
+        dados.efeito();
         
         toca_som(snd_compra);
     }
@@ -29,22 +47,32 @@ interagindo = function()
     
     if (_mouse_sobre)
     {
-        if (_mouse_segurando)
+        //verificando se tem dinheiro pra comprar
+        if (global.moeda >= dados.custo)
         {
-            //efeito do click
-            tween(id, "escala", .8, tween_animation.flat);
+            if (_mouse_segurando)
+            {
+                //efeito do click
+                tween(id, "escala", .8, tween_animation.flat);
+            }
+            else
+            {
+                //efeito do mouse em cima
+                tween(id, "escala", 1.2, tween_animation.elastic);
+                tween(id, "ang", 10, tween_animation.elastic);
+            }
+            
+            //comprando
+            if (_mouse_released)
+            {
+                comprando();
+            }
         }
         else
         {
-            //efeito do mouse em cima
-            tween(id, "escala", 1.2, tween_animation.elastic);
-            tween(id, "ang", 10, tween_animation.elastic);
-        }
-        
-        //comprando
-        if (_mouse_released)
-        {
-            comprando();
+            //retornando efeito
+            tween(id, "escala", 1, tween_animation.elastic);
+            tween(id, "ang", 0, tween_animation.bounce, 30);
         }
     }
     else
